@@ -1,7 +1,6 @@
 import Entries from './components/Entries'
 import Layout from './components/Layout'
-
-
+import styles from "../styles/Blog.module.css"
 
 const Blog = ({result}) => {
   
@@ -13,7 +12,7 @@ const Blog = ({result}) => {
         <main className='contenedor'>
           <h2 className='heading'>Blog</h2>
 
-          <div>
+          <div className={styles.container}>
             {result.map(results =>(
               <Entries 
                 key={results.id}
@@ -32,7 +31,7 @@ export async function getStaticProps(){
   const url = "http://localhost:1337/blogs"
   const response = await fetch(url);
   const result = await response.json();
-  console.log(result); 
+  
   return{
     props: {
       result
