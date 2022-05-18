@@ -1,13 +1,28 @@
-import React from 'react'
+import Entries from './components/Entries'
 import Layout from './components/Layout'
-import Link from 'next/link'
+
+
+
 const Blog = ({result}) => {
-  console.log(result)
+  
   return (
     <Layout
         title="blog"
     >
-        <h1>Desde Blog</h1>
+        
+        <main className='contenedor'>
+          <h2 className='heading'>Blog</h2>
+
+          <div>
+            {result.map(results =>(
+              <Entries 
+                key={results.id}
+                results={results}
+              />
+            ))}
+          </div>
+
+        </main>
 
     </Layout>
   )
