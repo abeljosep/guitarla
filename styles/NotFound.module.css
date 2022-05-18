@@ -1,0 +1,19 @@
+.container{
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.container a{
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0.5px solid var(--negro);
+    padding: 1rem 5rem;
+    text-decoration: none;
+
+}

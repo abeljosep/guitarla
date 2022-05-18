@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../../styles/Entries.module.css";
 
 const Entries = ({ results }) => {
-  const { title, summary, imagen, published_at, content, id } = results;
+  const { title, summary, imagen, published_at, content, id, url } = results;
 
   return (
     <article>
@@ -20,7 +20,7 @@ const Entries = ({ results }) => {
         <p>{toDate(published_at)}</p>
         <p>{summary}</p>
 
-        <Link href={`/blog/${id}`}>
+        <Link href={`/blog/${url}`}>
           <a className={styles.keepreading}>Keep Reading</a>
         </Link>
       </div>

@@ -1,3 +1,17 @@
+.blog_entrie{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.blog_content{
+    padding: 2.8rem;
+}
+
+.blog_content p:nth-child(2){
+    white-space:pre-wrap;
+    
+}
+
 .content{
     /* padding: 2rem; */
     margin-top: 2rem;
@@ -12,7 +26,7 @@
     min-height: 7rem;
 }
 
-.content p:first-of-type {
+.content p:first-of-type, .blog_content p:first-of-type{
     font-size: 1.6rem;
     color: var(--primary);
 }
