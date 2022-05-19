@@ -1,0 +1,66 @@
+.guitarsContainer{
+    display: grid ;
+    gap: 4rem;
+    
+}
+
+@media (min-width:768px) {
+    .guitarsContainer{
+        grid-template-columns: repeat(2, 1fr) ;
+        
+    }
+}
+
+@media (min-width:992px) {
+    .guitarsContainer{
+        grid-template-columns: repeat(3, 1fr) ;
+        
+    }
+}
+
+.guitarAndText{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+}
+
+.guitarAndText h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.description{
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.price{
+    color: var(--primary);
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.readMore{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--negro);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    padding: 0.5rem 2rem;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.readMore:hover{
+    color: var(--blanco);
+    background-color: var(--primary);
+
+}
