@@ -19,7 +19,7 @@ const Store = ({ guitarList }) => {
 };
 
 export async function getStaticProps() {
-  const urlToFetch = `${process.env.API_URL}/guitars`;
+  const urlToFetch = `${process.env.API_URL}/guitars?_sort=price:desc`;
   const response = await fetch(urlToFetch);
   const guitarList = await response.json();
 
